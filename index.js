@@ -58,7 +58,7 @@ const handleScroll = (e) => isElementInViewport();
 
 const contourMenu = document.querySelector("#contour_menu");
 
-contourMenu.addEventListener("click", function () {
+contourMenu.addEventListener("click", (e) => {
     const div_list = document.querySelector("#list_header");
 
     if (div_list.style.display == "block") {
@@ -83,7 +83,7 @@ function isElementInViewport() {
         <div class="description">
         <h2 id="titre_card5">Peugeot 208</h2>
         <p>Diesel, 5 portes, GPS, AutoRadio Forfait 1000km (0.5/km supplémentaire)<br><span id="prix_card1">999</span>€ - Agence de Paris</p>
-        </div
+        </div>
             
             <button class="reserver_button">Réserver et payer</button>
         </aside>
@@ -99,7 +99,7 @@ function isElementInViewport() {
         <div class="description">
         <h2 id="titre_card5">Peugeot 208</h2>
             <p>Diesel, 5 portes, GPS, AutoRadio Forfait 1000km (0.5/km supplémentaire)<br><span id="prix_card1">999</span>€ - Agence de Paris</p>
-        </div
+        </div>
             
             <button class="reserver_button">Réserver et payer</button>
         </aside>
@@ -115,8 +115,7 @@ function isElementInViewport() {
         <div class="description">
         <h2 id="titre_card5">Peugeot 208</h2>
             <p>Diesel, 5 portes, GPS, AutoRadio Forfait 1000km (0.5/km supplémentaire)<br><span id="prix_card1">999</span>€ - Agence de Paris</p>
-        </div
-            
+        </div>
             <button class="reserver_button">Réserver et payer</button>
         </aside>
     </div>
@@ -132,7 +131,7 @@ function isElementInViewport() {
         <div class="description">
         <h2 id="titre_card5">Peugeot 208</h2>
             <p>Diesel, 5 portes, GPS, AutoRadio Forfait 1000km (0.5/km supplémentaire)<br><span id="prix_card1">999</span>€ - Agence de Paris</p>
-        </div
+        </div>
             
             <button class="reserver_button">Réserver et payer</button>
         </aside>
@@ -158,3 +157,19 @@ function isElementInViewport() {
 
 window.addEventListener("scroll", handleScroll);
 
+
+
+document.getElementById("myForm").addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    // Récupération des valeurs des champs
+    const lieuDepartValue = document.getElementById("select_form").value;
+    const dateDebutValue = document.getElementById("dateDebut").value;
+    const dateFinValue = document.getElementById("dateFin").value;
+
+
+    sessionStorage.setItem("lieuDepart", lieuDepartValue);
+    sessionStorage.setItem("dateDebut", dateDebutValue);
+    sessionStorage.setItem("dateFin", dateFinValue);
+
+});
