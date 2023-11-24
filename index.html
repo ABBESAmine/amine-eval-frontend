@@ -12,7 +12,8 @@
     <meta property="og:site_name" content="LocVoiture">
     <meta property="og:title" content="titreFacebook">
     <meta property="og:url" content="http://127.0.0.1:5500/index.html">
-    <meta property="og:description" content="Site pour louer une voiture ou un chauffeur partout en France très rapidement.">
+    <meta property="og:description"
+        content="Site pour louer une voiture ou un chauffeur partout en France très rapidement.">
     <meta property="og:image" content="http://127.0.0.1:5500/index.html/images/background.jpg">
     <meta property="og:image:width" content="2560">
     <meta property="og:image:height" content="886">
@@ -51,17 +52,17 @@
                 <div id="form" class="container">
                     <div id="champ_form">
                         <div>
-                            <select class="form-control" name="lieu_depart" id="select_form">
+                            <select class="form-control" name="lieu_depart" id="select_form" required>
                                 <option value="test1">Adresse de départ</option>
                                 <option value="test2">test 2</option>
                                 <option value="test3">test 3</option>
                             </select>
                         </div>
                         <div>
-                            <input class="form-control" id="dateDebut" type="date" />
+                            <input class="form-control" id="dateDebut" type="date" required />
                         </div>
                         <div>
-                            <input class="form-control" id="dateFin" type="date" />
+                            <input class="form-control" id="dateFin" type="date" required />
                         </div>
                     </div>
                     <input type="submit" value="Valider ma recherche" />

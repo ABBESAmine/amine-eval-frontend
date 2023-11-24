@@ -1,6 +1,6 @@
 "use strict";
 
-import { slides, images_bg } from './data.js';
+import { slides, images_bg } from "./data.js";
 
 const interval = 5000;
 let currentIndex = 0;
@@ -17,41 +17,41 @@ const contain = document.querySelectorAll(".image_arrow_card");
 console.log(contain);
 
 for (let i = 0; i < contain.length; i++) {
-    createCarousel(contain[i]);
+  createCarousel(contain[i]);
 }
 
 function createCarousel(container) {
-    const interval = 5000;
-    let currentIndex = 0;
-    const imgElement = container.querySelector("img");
-    const arrowRight = container.querySelector(".arrow_right");
-    const arrowLeft = container.querySelector(".arrow_left");
-    console.log(arrowLeft);
-    console.log(arrowRight);
+  const interval = 5000;
+  let currentIndex = 0;
+  const imgElement = container.querySelector("img");
+  const arrowRight = container.querySelector(".arrow_right");
+  const arrowLeft = container.querySelector(".arrow_left");
+  console.log(arrowLeft);
+  console.log(arrowRight);
 
-    let img_selected = 0;
+  let img_selected = 0;
 
-    arrowRight.addEventListener("click", (e) => {
-        if (img_selected == 3) {
-            img_selected = 0;
-        } else {
-            img_selected++;
-        }
-        imgElement.src = "images/" + slides[img_selected].image;
-        console.log(imgElement.src);
-    });
+  arrowRight.addEventListener("click", (e) => {
+    if (img_selected == 3) {
+      img_selected = 0;
+    } else {
+      img_selected++;
+    }
+    imgElement.src = "images/" + slides[img_selected].image;
+    console.log(imgElement.src);
+  });
 
-    arrowLeft.addEventListener("click", (e) => {
-        if (img_selected == 0) {
-            img_selected = 3;
-        } else {
-            img_selected--;
-        }
+  arrowLeft.addEventListener("click", (e) => {
+    if (img_selected == 0) {
+      img_selected = 3;
+    } else {
+      img_selected--;
+    }
 
-        imgElement.src = "images/" + slides[img_selected].image;
-        console.log(imgElement.src);
-        console.log(imgElement.src);
-    });
+    imgElement.src = "images/" + slides[img_selected].image;
+    console.log(imgElement.src);
+    console.log(imgElement.src);
+  });
 }
 
 const handleScroll = (e) => isElementInViewport();
@@ -59,20 +59,20 @@ const handleScroll = (e) => isElementInViewport();
 const contourMenu = document.querySelector("#contour_menu");
 
 contourMenu.addEventListener("click", (e) => {
-    const div_list = document.querySelector("#list_header");
+  const div_list = document.querySelector("#list_header");
 
-    if (div_list.style.display == "block") {
-        div_list.style.display = "none";
-    } else {
-        div_list.style.display = "block";
-    }
+  if (div_list.style.display == "block") {
+    div_list.style.display = "none";
+  } else {
+    div_list.style.display = "block";
+  }
 });
 
 function isElementInViewport() {
-    const el = document.querySelector("#img_card_4");
-    const rect = el.getBoundingClientRect();
-    const container = document.createElement('div');
-    const insertedContent = `<div id="main_deux_partie">
+  const el = document.querySelector("#img_card_4");
+  const rect = el.getBoundingClientRect();
+  const container = document.createElement("div");
+  const insertedContent = `<div id="main_deux_partie">
     <div class="card_voiture">
         <div class="image_arrow_card">
             <i class="fa-solid fa-circle-chevron-left arrow_left"></i>
@@ -136,40 +136,40 @@ function isElementInViewport() {
             <button class="reserver_button">Réserver et payer</button>
         </aside>
     </div>
-</div>`
-    container.innerHTML = insertedContent;
-    console.log(rect.top <= window.screen.height);
-    if (rect.top <= window.screen.height) {
-        console.log('test')
-        window.removeEventListener("scroll", handleScroll);
-        console.log('test after remove')
-        document.querySelector('main').insertAdjacentElement('beforeend', container);
+</div>`;
+  container.innerHTML = insertedContent;
+  console.log(rect.top <= window.screen.height);
+  if (rect.top <= window.screen.height) {
+    console.log("test");
+    window.removeEventListener("scroll", handleScroll);
+    console.log("test after remove");
+    document
+      .querySelector("main")
+      .insertAdjacentElement("beforeend", container);
 
-        const container2 = document.querySelectorAll("#main_deux_partie .image_arrow_card");
-        for (let i = 0; i < 4; i++) {
-            createCarousel(container2[i]);
-            console.log("carrou");
-            console.log(container2[i]);
-            console.log(container2.length);
-        }
+    const container2 = document.querySelectorAll(
+      "#main_deux_partie .image_arrow_card"
+    );
+    for (let i = 0; i < 4; i++) {
+      createCarousel(container2[i]);
+      console.log("carrou");
+      console.log(container2[i]);
+      console.log(container2.length);
     }
+  }
 }
 
 window.addEventListener("scroll", handleScroll);
 
-
-
 document.getElementById("myForm").addEventListener("submit", (event) => {
-    event.preventDefault();
+  event.preventDefault();
 
-    // Récupération des valeurs des champs
-    const lieuDepartValue = document.getElementById("select_form").value;
-    const dateDebutValue = document.getElementById("dateDebut").value;
-    const dateFinValue = document.getElementById("dateFin").value;
+  // Récupération des valeurs des champs
+  const lieuDepartValue = document.getElementById("select_form").value;
+  const dateDebutValue = document.getElementById("dateDebut").value;
+  const dateFinValue = document.getElementById("dateFin").value;
 
-
-    sessionStorage.setItem("lieuDepart", lieuDepartValue);
-    sessionStorage.setItem("dateDebut", dateDebutValue);
-    sessionStorage.setItem("dateFin", dateFinValue);
-
+  sessionStorage.setItem("lieuDepart", lieuDepartValue);
+  sessionStorage.setItem("dateDebut", dateDebutValue);
+  sessionStorage.setItem("dateFin", dateFinValue);
 });
