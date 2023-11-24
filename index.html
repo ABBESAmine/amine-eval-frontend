@@ -1,27 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
 </head>
+
 <body>
     <header id="header">
+        <img src="images/background.jpg" alt="background-header" />
         <div id="menu_header">
             <div id="contour_menu">
                 <i class="fa-solid fa-bars fa-xl"></i>
             </div>
         </div>
-        
-        <div id="text_header">
-            <h1>Bienvenue à bord</h1>
-            <p>Location de voiture 24/24 7j/7</p>
-        </div>
+
+        <section id="content_header">
+            <div id="text_header">
+                <h1>Bienvenue à bord</h1>
+                <p>Location de voiture 24/24 7j/7</p>
+            </div>
+
+
+            <form action="">
+                <div id="form" class="container">
+                    <div id="champ_form">
+                        <select class="form-control" name="lieu_depart" id="select_form">
+                            <option value="test1">test 1</option>
+                            <option value="test2">test 2</option>
+                            <option value="test3">test 3</option>
+                        </select>
+                        <div class="div_labelform">
+                            <label for="dateDebut">Début de location</label>
+                            <input class="form-control" id="dateDebut" type="date" placeholder="test" />
+                        </div>
+                        <div class="div_labelform">
+                            <label for="dateFin">Fin de location</label>
+                            <input class="form-control" id="dateFin" type="date" />
+                        </div>
+                    </div>
+                    <input type="submit" value="Valider ma recherche" />
+                </div>
+            </form>
+        </section>
     </header>
 
+    <main>
+        <div class="card_voiture">
+            <div>
+                <img src="images/vehicule1.png" alt="voiture 1">
+            </div>
+            <aside>
+                <h2>Peugeot 208</h2>
+                <p>Diesel, 5 portes, GPS, AutoRadio Forfait 1000km (0.5/km supplémentaire)<br>999€ - Agence de Paris</p>
+            </aside>
+        </div>
+    </main>
+
     <script src="https://kit.fontawesome.com/041dd9930e.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
+
 </html>
