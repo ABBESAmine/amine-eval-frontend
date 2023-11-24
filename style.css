@@ -9,6 +9,11 @@
     box-sizing: border-box;
     list-style-type: none;
     font-family: 'Trebuchet MS';
+    font-size: 15px;
+}
+
+h1{
+    font-size: 50px;
 }
 
 #header{
@@ -20,6 +25,18 @@
     position: absolute;
     z-index: -1;
 
+}
+
+#list_header{
+    background-color: #fff;
+    color: black;
+    position: absolute;
+    width: 100%;
+    display: none;
+}
+
+#list_header li{
+    padding: 10px;
 }
 
 #menu_header{
@@ -58,11 +75,10 @@ form{
 }
 
 #form{
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
     margin-top: 250px;
     padding-left: 5px;
-    
     height: 50px;
     display: flex;
     align-items: center;
@@ -82,37 +98,44 @@ form{
 
 
 
-#champ_form > * {
-    height: 40px;
-}
 
-input{
-    height: 40px!important;
+
+#champ_form input{
+    height: 40px;
 }
 
 input[type="date"] {
     border: none;
     border-radius: 5px;
-    width: 20%;
+
 }
 
 select{
-    width: 15%!important;
+    height: 40px;
 }
+
 
 
 
 input[type="submit"] {
     background-color: rgba(0, 255, 0, 0.5);
-    display: block;
     border: none;
     width: 30%;
     color: white;
     height: 50px!important;
 }
 
+#header_main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
 main{
+    margin: 0 auto;
     margin-top: 100px;
+    width: 80%;
 }
 
 main img{
@@ -141,9 +164,24 @@ main img{
     background: linear-gradient(to bottom,#4e984f, #59b459);
 }
 
-@media only screen and (min-width: 1024px) {
-    body {
-        font-size: 18px;
+@media only screen and (max-width: 1024px) {
+
+    #content_header{
+        margin-top: 0;
+        justify-content: flex-start;
+    }
+    #form{
+        padding: 0;
+        display: block;
+        flex-direction: column;
+        margin-top: 100px;
+    }
+    input[type="submit"] {
+        width: 100%;
+    }
+    
+    .description{
+        display: none;
     }
 
     /* Ajoutez d'autres styles spécifiques pour les écrans plus larges ici */

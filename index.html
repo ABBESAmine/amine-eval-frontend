@@ -17,6 +17,16 @@
                 <i class="fa-solid fa-bars fa-xl"></i>
             </div>
         </div>
+        <div id="list_header">
+            <ul>
+                <li>Louer une voiture</li>
+                <li>Louer un utilitaire</li>
+                <li>Réserver un chauffeur</li>
+                <li>Découvrez nos agences</li>
+                <li>Mon compte</li>
+                <li>Contact</li>
+            </ul>
+        </div>
 
         <section id="content_header">
             <div id="text_header">
@@ -28,14 +38,19 @@
             <form action="">
                 <div id="form" class="container">
                     <div id="champ_form">
-                        <select class="form-control" name="lieu_depart" id="select_form">
-                            <option value="test1">test 1</option>
-                            <option value="test2">test 2</option>
-                            <option value="test3">test 3</option>
-                        </select>
-
-                        <input class="form-control" id="dateDebut" type="date" placeholder="test" />
-                        <input class="form-control" id="dateFin" type="date" />
+                        <div>
+                            <select class="form-control" name="lieu_depart" id="select_form">
+                                <option value="test1">Adresse de départ</option>
+                                <option value="test2">test 2</option>
+                                <option value="test3">test 3</option>
+                            </select>
+                        </div>
+                        <div>
+                            <input class="form-control" id="dateDebut" type="date" placeholder="test" />
+                        </div>
+                        <div>
+                            <input class="form-control" id="dateFin" type="date" />
+                        </div>
                     </div>
                     <input type="submit" value="Valider ma recherche" />
                 </div>
@@ -44,6 +59,12 @@
     </header>
 
     <main>
+        <div id="header_main">
+            <p><h3>7</h3> résultats</p>
+            <select name="select_tri">
+                <option value="croissant">Prix croissant</option>
+            </select>
+        </div>
         <div class="card_voiture">
             <div class="image_arrow_card">
                 <i class="fa-solid fa-circle-chevron-left arrow_left"></i>
@@ -51,9 +72,11 @@
                 <i class="fa-solid fa-circle-chevron-right arrow_right"></i>
             </div>
             <aside>
-                <h2 id="titre_card1">Peugeot 208</h2>
-                <p>Diesel, 5 portes, GPS, AutoRadio Forfait 1000km (0.5/km supplémentaire)<br><span
+                <div class="description">
+                    <h2 id="titre_card1">Peugeot 208</h2>
+                    <p>Diesel, 5 portes, GPS, AutoRadio Forfait 1000km (0.5/km supplémentaire)<br><span
                         id="prix_card1">999</span>€ - Agence de Paris</p>
+                </div>
                 <button class="reserver_button">Réserver et payer</button>
             </aside>
         </div>
@@ -65,9 +88,11 @@
                 <i class="fa-solid fa-circle-chevron-right arrow_right"></i>
             </div>
             <aside>
-                <h2 id="titre_card2">Peugeot 208</h2>
-                <p>Diesel, 5 portes, GPS, AutoRadio Forfait 1000km (0.5/km supplémentaire)<br><span
+                <div class="description">
+                    <h2 id="titre_card2">Peugeot 208</h2>
+                    <p>Diesel, 5 portes, GPS, AutoRadio Forfait 1000km (0.5/km supplémentaire)<br><span
                         id="prix_card2">999</span>€ - Agence de Paris</p>
+                </div>
                 <button class="reserver_button">Réserver et payer</button>
             </aside>
         </div>
@@ -79,9 +104,12 @@
                 <i class="fa-solid fa-circle-chevron-right arrow_right"></i>
             </div>
             <aside>
-                <h2 id="titre_card3">Peugeot 208</h2>
+                <div class="description">
+                    <h2 id="titre_card3">Peugeot 208</h2>
                 <p>Diesel, 5 portes, GPS, AutoRadio Forfait 1000km (0.5/km supplémentaire)<br><span
                         id="prix_card3">999</span>€ - Agence de Paris</p>
+                </div>
+                
                 <button class="reserver_button">Réserver et payer</button>
             </aside>
         </div>
@@ -94,12 +122,23 @@
                 <i class="fa-solid fa-circle-chevron-right arrow_right"></i>
             </div>
             <aside>
-                <h2 id="titre_card4">Peugeot 208</h2>
+                <div class="description">
+                    <h2 id="titre_card4">Peugeot 208</h2>
                 <p>Diesel, 5 portes, GPS, AutoRadio Forfait 1000km (0.5/km supplémentaire)<br><span
                         id="prix_card4">999</span>€ - Agence de Paris</p>
+                </div>
+                
                 <button class="reserver_button">Réserver et payer</button>
             </aside>
         </div>
+
+
+
+
+
+
+
+        
 
 
 
