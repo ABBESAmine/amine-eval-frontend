@@ -11,7 +11,7 @@
 
 <body>
     <header id="header">
-        <img src="images/background.jpg" alt="background-header" />
+        <img src="images/background.jpg" id="img_banner" alt="background-header" />
         <div id="menu_header">
             <div id="contour_menu">
                 <i class="fa-solid fa-bars fa-xl"></i>
@@ -33,14 +33,9 @@
                             <option value="test2">test 2</option>
                             <option value="test3">test 3</option>
                         </select>
-                        <div class="div_labelform">
-                            <label for="dateDebut">Début de location</label>
-                            <input class="form-control" id="dateDebut" type="date" placeholder="test" />
-                        </div>
-                        <div class="div_labelform">
-                            <label for="dateFin">Fin de location</label>
-                            <input class="form-control" id="dateFin" type="date" />
-                        </div>
+
+                        <input class="form-control" id="dateDebut" type="date" placeholder="test" />
+                        <input class="form-control" id="dateFin" type="date" />
                     </div>
                     <input type="submit" value="Valider ma recherche" />
                 </div>
@@ -50,17 +45,69 @@
 
     <main>
         <div class="card_voiture">
-            <div>
-                <img src="images/vehicule1.png" alt="voiture 1">
+            <div class="image_arrow_card">
+                <i class="fa-solid fa-circle-chevron-left arrow_left"></i>
+                <img src="images/vehicule1.png" id="img_card_1" alt="voiture 1">
+                <i class="fa-solid fa-circle-chevron-right arrow_right"></i>
             </div>
             <aside>
-                <h2>Peugeot 208</h2>
-                <p>Diesel, 5 portes, GPS, AutoRadio Forfait 1000km (0.5/km supplémentaire)<br>999€ - Agence de Paris</p>
+                <h2 id="titre_card1">Peugeot 208</h2>
+                <p>Diesel, 5 portes, GPS, AutoRadio Forfait 1000km (0.5/km supplémentaire)<br><span
+                        id="prix_card1">999</span>€ - Agence de Paris</p>
+                <button class="reserver_button">Réserver et payer</button>
             </aside>
         </div>
+
+        <div class="card_voiture">
+            <div class="image_arrow_card">
+                <i class="fa-solid fa-circle-chevron-left arrow_left"></i>
+                <img src="images/vehicule1.png" id="img_card_2" alt="voiture 1">
+                <i class="fa-solid fa-circle-chevron-right arrow_right"></i>
+            </div>
+            <aside>
+                <h2 id="titre_card2">Peugeot 208</h2>
+                <p>Diesel, 5 portes, GPS, AutoRadio Forfait 1000km (0.5/km supplémentaire)<br><span
+                        id="prix_card2">999</span>€ - Agence de Paris</p>
+                <button class="reserver_button">Réserver et payer</button>
+            </aside>
+        </div>
+
+        <div class="card_voiture">
+            <div class="image_arrow_card">
+                <i class="fa-solid fa-circle-chevron-left arrow_left"></i>
+                <img src="images/vehicule1.png" id="img_card_3" alt="voiture 1">
+                <i class="fa-solid fa-circle-chevron-right arrow_right"></i>
+            </div>
+            <aside>
+                <h2 id="titre_card3">Peugeot 208</h2>
+                <p>Diesel, 5 portes, GPS, AutoRadio Forfait 1000km (0.5/km supplémentaire)<br><span
+                        id="prix_card3">999</span>€ - Agence de Paris</p>
+                <button class="reserver_button">Réserver et payer</button>
+            </aside>
+        </div>
+
+
+        <div class="card_voiture">
+            <div class="image_arrow_card">
+                <i class="fa-solid fa-circle-chevron-left arrow_left"></i>
+                <img src="images/vehicule1.png" id="img_card_4" alt="voiture 1">
+                <i class="fa-solid fa-circle-chevron-right arrow_right"></i>
+            </div>
+            <aside>
+                <h2 id="titre_card4">Peugeot 208</h2>
+                <p>Diesel, 5 portes, GPS, AutoRadio Forfait 1000km (0.5/km supplémentaire)<br><span
+                        id="prix_card4">999</span>€ - Agence de Paris</p>
+                <button class="reserver_button">Réserver et payer</button>
+            </aside>
+        </div>
+
+
+
+
     </main>
 
     <script src="https://kit.fontawesome.com/041dd9930e.js" crossorigin="anonymous"></script>
+    <script src="index.js" type="module"></script>
 </body>
 
 </html>

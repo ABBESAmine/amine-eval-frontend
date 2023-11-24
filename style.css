@@ -83,24 +83,24 @@ form{
 
 
 #champ_form > * {
-    width: 70%;
     height: 40px;
 }
 
 input{
-    height: 50px!important;
+    height: 40px!important;
 }
 
 input[type="date"] {
     border: none;
     border-radius: 5px;
+    width: 20%;
 }
 
-.div_labelform{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+select{
+    width: 15%!important;
 }
+
+
 
 input[type="submit"] {
     background-color: rgba(0, 255, 0, 0.5);
@@ -108,14 +108,43 @@ input[type="submit"] {
     border: none;
     width: 30%;
     color: white;
+    height: 50px!important;
 }
 
 main{
     margin-top: 100px;
 }
 
+main img{
+    width: 90%;
+}
+
 .card_voiture{
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 50px   ;
+}
+
+.image_arrow_card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+.reserver_button{
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 4px;
+    background: linear-gradient(to bottom,#4e984f, #59b459);
+}
+
+@media only screen and (min-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+
+    /* Ajoutez d'autres styles spécifiques pour les écrans plus larges ici */
 }
