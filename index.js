@@ -76,7 +76,7 @@ function isElementInViewport() {
     <div class="card_voiture">
         <div class="image_arrow_card">
             <i class="fa-solid fa-circle-chevron-left arrow_left"></i>
-            <img src="images/vehicule1.png" id="img_card_5" alt="voiture 1">
+            <img src="images/vehicule1.png" id="img_card_5" alt="voiture 5">
             <i class="fa-solid fa-circle-chevron-right arrow_right"></i>
         </div>
         <aside>
@@ -92,7 +92,7 @@ function isElementInViewport() {
     <div class="card_voiture">
         <div class="image_arrow_card">
             <i class="fa-solid fa-circle-chevron-left arrow_left"></i>
-            <img src="images/vehicule1.png" id="img_card_5" alt="voiture 1">
+            <img src="images/vehicule1.png" id="img_card_5" alt="voiture 6">
             <i class="fa-solid fa-circle-chevron-right arrow_right"></i>
         </div>
         <aside>
@@ -108,7 +108,7 @@ function isElementInViewport() {
     <div class="card_voiture">
         <div class="image_arrow_card">
             <i class="fa-solid fa-circle-chevron-left arrow_left"></i>
-            <img src="images/vehicule1.png" id="img_card_5" alt="voiture 1">
+            <img src="images/vehicule1.png" id="img_card_5" alt="voiture 7">
             <i class="fa-solid fa-circle-chevron-right arrow_right"></i>
         </div>
         <aside>
@@ -124,7 +124,7 @@ function isElementInViewport() {
     <div class="card_voiture">
         <div class="image_arrow_card">
             <i class="fa-solid fa-circle-chevron-left arrow_left"></i>
-            <img src="images/vehicule1.png" id="img_card_5" alt="voiture 1">
+            <img src="images/vehicule1.png" id="img_card_5" alt="voiture 8">
             <i class="fa-solid fa-circle-chevron-right arrow_right"></i>
         </div>
         <aside>
